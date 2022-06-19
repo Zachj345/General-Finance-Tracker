@@ -1,0 +1,82 @@
+<html>
+  <title>{% block title %} Sign-up {%endblock%}</title>
+  {% extends 'base.html' %} {% block content %}
+  <head>
+    <style>
+      .title {
+        text-align: center;
+        margin: 3% 20% 0% 20%;
+        font-family: -apple-system;
+        font-size: 2.5em;
+        color: beige;
+      }
+      .title2 {
+        text-align: center;
+        margin: 1% 20% 1% 20%;
+        font-family: -apple-system;
+        font-size: 2.5em;
+        color: beige;
+      }
+      .forms {
+        margin: 1% 20%;
+        text-align: center;
+      }
+      #submit-btn {
+        margin-top: 6%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Hello!</h1>
+    <h2 class="title2">
+      Please create an account to have access to this Financial Tracker app!
+    </h2>
+    <div style="margin: 0 21%">
+      <hr />
+    </div>
+    <br />
+
+    <div class="mb-3 forms">
+      <form action="/sign-up" autocomplete="off" method="POST">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Username</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+          id="exampleFormControlInput1"
+          placeholder="@name"
+        />
+        <br />
+        <label for="exampleFormControlInput1" class="form-label"
+          >Password</label
+        >
+        <input
+          type="password"
+          class="form-control"
+          name="password1"
+          id="password1"
+          placeholder="Enter password"
+        />
+        <br />
+        <label for="exampleFormControlInput1" class="form-label"
+          >Please Repeat Password</label
+        >
+        <input
+          type="password"
+          class="form-control"
+          name="password2"
+          id="password2"
+          placeholder="Repeat password"
+        />
+        <div class="d-grid gap-2 col-6 mx-auto" id="submit-field">
+          <button class="btn btn-success" id="submit-btn" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+  {% endblock %}
+</html>
