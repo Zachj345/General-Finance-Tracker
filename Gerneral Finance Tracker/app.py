@@ -49,6 +49,8 @@ def get_total(user_id):
         flash('no user to calculate subtotal', category='error')
     else:
         return sum([i.amount for i in user.expenses])
+    
+'''ROUTES'''
 
 
 @app.route('/', methods=['GET', 'POST'])
